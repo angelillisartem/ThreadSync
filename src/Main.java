@@ -31,30 +31,36 @@ public class Main {
         //        gen1.start();
         //        gen2.start();
         //        Fine Commento
+        //
+        //        Inizio Commento
+        //        Incrementatore incrementatore = new Incrementatore();
+        //        Thread t1 = new Thread(new Runnable() {
+        //           @Override
+        //           public void run() {
+        //               for (int i = 0; i < 10000; i++) {
+        //                   incrementatore.incrementa();
+        //               }
+        //           }
+        //       });
+        //        Thread t2 = new Thread(new Runnable() {
+        //            @Override
+        //            public void run() {
+        //                for (int i = 0; i < 1000; i++) {
+        //                    incrementatore.incrementa();
+        //                }
+        //            }
+        //        });
+        //
+        //       t1.start();
+        //       t2.start();
+        //       t1.join();
+        //       t2.join();
+        //       System.out.print("Incrementatore: " + incrementatore.incrementometro);
+        //
+        //       Fine Commento
 
-        Incrementatore incrementatore = new Incrementatore();
-        Thread t1 = new Thread(new Runnable() {
-           @Override
-           public void run() {
-               for (int i = 0; i < 10000; i++) {
-                   incrementatore.incrementa();
-               }
-           }
-       });
-        Thread t2 = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                for (int i = 0; i < 1000; i++) {
-                    incrementatore.incrementa();
-                }
-            }
-        });
-
-       t1.start();
-       t2.start();
-       t1.join();
-       t2.join();
-       System.out.print("Incrementatore: " + incrementatore.incrementometro);
+    Thread tl = new Thread(new FileListener());
+    tl.start();
     }
 
 }
